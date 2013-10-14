@@ -33,12 +33,10 @@ module OmniAuth
       end
 
       def other_phase
-        puts "other_phase"
         if on_registration_path?
           if request.get?
             registration_form
           elsif request.post?
-            
             registration_phase
           end
         else
