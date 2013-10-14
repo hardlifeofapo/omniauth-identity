@@ -10,7 +10,7 @@ module OmniAuth
       option :on_login, nil
       option :on_registration, nil
       option :on_failed_registration, nil
-      option :locate_conditions, lambda{|req| {model.auth_key => req['auth_key']} }
+      option :locate_conditions, lambda{|req| { model.auth_key => req['auth_key']} }
 
       def request_phase
         if options[:on_login]
